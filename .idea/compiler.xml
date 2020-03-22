@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="micro-city2" />
+        <module name="micro-common" />
+        <module name="micro-city4" />
+        <module name="micro-city3" />
+        <module name="micro-redis" />
+        <module name="micro-person" />
+        <module name="micro-city" />
+        <module name="micro-person2" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="micro_city4" target="1.5" />
+      <module name="micro_common" target="1.5" />
+      <module name="micro_person" target="1.5" />
+      <module name="micro_person2" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

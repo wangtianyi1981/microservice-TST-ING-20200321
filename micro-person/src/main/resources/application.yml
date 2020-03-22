@@ -1,0 +1,18 @@
+server:
+  port: 8885
+
+spring:
+    datasource:
+      username: root
+      password: fhit123
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/mydb?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    jpa:
+      database: mysql
+      generate-ddl: true  #利用jpa，根据实体类，自动生成相应的表
+      show-sql: true
+#      database-platform: org.hibernate.dialect.MySQL5Dialect
+
+#如果generate-ddl: true无法生成相应的表，打开下面注释
+#      hibernate:
+#        ddl-auto: update
