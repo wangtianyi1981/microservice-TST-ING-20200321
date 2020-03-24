@@ -13,6 +13,7 @@
         <module name="micro-redis" />
         <module name="micro-person" />
         <module name="micro-city" />
+        <module name="micro-kafka" />
         <module name="micro-person2" />
       </profile>
     </annotationProcessing>

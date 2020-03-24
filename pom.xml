@@ -8,15 +8,17 @@
     <artifactId>micro-service</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <!--    <version>1.0-SNAPSHOT</version>-->
     <modules>
         <module>micro-common</module>
         <module>micro-city</module>
-        <module>micro-redis</module>
         <module>micro-city2</module>
         <module>micro-city3</module>
         <module>micro-city4</module>
         <module>micro-person2</module>
         <module>micro-person</module>
+        <module>micro-redis</module>
+        <module>micro-kafka</module>
     </modules>
 
     <properties>
@@ -27,7 +29,6 @@
 
     <!--    spring boot/spring cloud提供了版本仲裁中心，必须将依赖写在父工程的<parent>或dependencyManagement-->
     <!--    否则，子项目无法使用spring boot/spring cloud提供的仲裁功能-->
-
     <dependencyManagement>
         <dependencies>
             <!--            引用spring boot start-->
@@ -57,5 +58,19 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>fhtx_nexus</id>
+            <name>releases</name>
+            <url>http://192.168.2.114:8099/repository/maven-releases/</url>
+            <uniqueVersion>true</uniqueVersion>
+        </repository>
+        <snapshotRepository>
+            <id>fhtx_nexus</id>
+            <name>snapshots</name>
+            <url>http://192.168.2.114:8099/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>

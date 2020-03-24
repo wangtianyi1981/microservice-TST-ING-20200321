@@ -69,4 +69,18 @@
         </resources>
     </build>
 
+<!--    <distributionManagement>-->
+<!--        <repository>-->
+<!--            <id>fhtx_nexus</id>-->
+<!--            <name>releases</name>-->
+<!--            <url>http://192.168.2.114:8099/repository/maven-releases/</url>-->
+<!--            <uniqueVersion>true</uniqueVersion>-->
+<!--        </repository>-->
+<!--        <snapshotRepository>-->
+<!--            <id>fhtx_nexus</id>-->
+<!--            <name>snapshots</name>-->
+<!--            <url>http://192.168.2.114:8099/repository/maven-snapshots/</url>-->
+<!--        </snapshotRepository>-->
+<!--    </distributionManagement>-->
+
 </project>
