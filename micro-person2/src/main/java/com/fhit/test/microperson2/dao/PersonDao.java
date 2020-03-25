@@ -1,11 +1,14 @@
 package com.fhit.test.microperson2.dao;
 
 import com.fhit.test.microperson2.entity.Person;
+import org.apache.tomcat.util.descriptor.web.SecurityRoleRef;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
@@ -52,6 +55,13 @@ public interface PersonDao extends JpaRepository<Person, String>, JpaSpecificati
     @Query("update Person set age=?1")
     public int updatePerson(Integer id);
 
+    /**
+     * 注意：参数id的类型，这个办法没测试过
+     *
+     * @param id
+     * @param person
+     * @return
+     */
     @Modifying
     @Query("update Person p set p.age=:#{#person.age} where p.id=:#{#person.id}")
     public int updatePerson2(Integer id, Person person);
@@ -59,4 +69,15 @@ public interface PersonDao extends JpaRepository<Person, String>, JpaSpecificati
     /**
      * 推荐方式四：原生态sql语句
      */
+    @Query(nativeQuery = true, value = "select name from person where id = ?")
+    public String findNameById(String id);
+
+    @Query(nativeQuery = true, value = "select * from person where name = ? and age = ?")
+    public List<Person> findPersonByNameAndAge(String name, int age);
+
+    @Query(nativeQuery = true, value = "select * from person where age in (:ages) order by age")
+    public List<Person> findPersonByAges(@Param("ages") List<Integer> ages, Pageable pageable);
+
+    @Query(nativeQuery = true, value = "select * from person where age in (:ages) order by age")
+    public Page<Person> findPersonByAges2(@Param("ages") List<Integer> ages, Pageable pageable);
 }

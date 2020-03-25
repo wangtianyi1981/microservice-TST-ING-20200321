@@ -17,7 +17,8 @@ import java.util.concurrent.ExecutionException;
  * @create 2020-03-24 18:29
  */
 public class KfkProducer {
-    static String topic = "newtopictest";
+    static String topic = "topictest";
+//    static String topic = "newtopictest";
     public static void main(String[] args) {
 //        create();
         // 执行后默认生成新的topic
@@ -29,6 +30,9 @@ public class KfkProducer {
 //        String topic = "topictest";
 //        String topic = "newtopictest";
         Producer<String, String> producer = new org.apache.kafka.clients.producer.KafkaProducer<String, String>(props);
+        producer.send(new ProducerRecord(topic, "idea-key1", "java-message 1"));
+        producer.send(new ProducerRecord(topic, "idea-key1", "java-message 1"));
+        producer.send(new ProducerRecord(topic, "idea-key1", "java-message 2"));
         producer.send(new ProducerRecord(topic, "idea-key2", "java-message 1"));
         producer.send(new ProducerRecord(topic, "idea-key2", "java-message 2"));
         producer.send(new ProducerRecord(topic, "idea-key2", "java-message 3"));
