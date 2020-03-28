@@ -19,6 +19,7 @@
         <module>micro-person</module>
         <module>micro-redis</module>
         <module>micro-kafka</module>
+        <module>micro-rocketmq</module>
     </modules>
 
     <properties>
