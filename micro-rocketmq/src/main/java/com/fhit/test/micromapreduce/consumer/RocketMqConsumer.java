@@ -1,6 +1,6 @@
-package com.fhit.test.microrocketmq.consumer;
+package com.fhit.test.micromapreduce.consumer;
 
-import com.fhit.test.microrocketmq.CONST;
+import com.fhit.test.micromapreduce.CONST;
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyContext;
 import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus;
@@ -18,7 +18,7 @@ import java.util.List;
  * @create 2020-03-24 19:10
  */
 
-public class RocketMqConsumer_cluster {
+public class RocketMqConsumer {
 
     public static void main(String[] args) {
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("myConsumer");

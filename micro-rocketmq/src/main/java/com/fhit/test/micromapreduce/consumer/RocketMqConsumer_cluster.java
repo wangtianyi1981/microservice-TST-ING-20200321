@@ -1,7 +1,6 @@
-package com.fhit.test.microrocketmq.consumer;
+package com.fhit.test.micromapreduce.consumer;
 
-import com.fhit.test.microrocketmq.CONST;
-import org.apache.rocketmq.client.consumer.DefaultMQPullConsumer;
+import com.fhit.test.micromapreduce.CONST;
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyContext;
 import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus;
@@ -10,7 +9,6 @@ import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.common.consumer.ConsumeFromWhere;
 import org.apache.rocketmq.common.message.MessageExt;
 import org.apache.rocketmq.remoting.common.RemotingHelper;
-import org.springframework.http.StreamingHttpOutputMessage;
 
 import java.io.UnsupportedEncodingException;
 import java.util.List;
@@ -20,16 +18,17 @@ import java.util.List;
  * @create 2020-03-24 19:10
  */
 
-public class RocketMqConsumer {
+public class RocketMqConsumer_cluster {
 
     public static void main(String[] args) {
-        DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("myConsumer");
-        consumer.setNamesrvAddr(CONST.NAMESERVER_ADDR);
+        DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("myConsumer_cluster");
+        consumer.setNamesrvAddr(CONST.NAMESERVER_ADDR_CLUSTER);
 
         consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_LAST_OFFSET);
 //        consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_TIMESTAMP);
         try {
-            consumer.subscribe("myTopicl", "*");
+            System.out.println("------------start----------");
+            consumer.subscribe("myTopicl_cluster", "*");
 
             //设置监听器，当生产者生产数据时，将数据推送给消费者
             consumer.registerMessageListener(new MessageListenerConcurrently() {

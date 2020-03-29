@@ -20,6 +20,7 @@
         <module>micro-redis</module>
         <module>micro-kafka</module>
         <module>micro-rocketmq</module>
+        <module>micro-mapreduce</module>
     </modules>
 
     <properties>

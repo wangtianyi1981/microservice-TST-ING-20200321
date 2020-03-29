@@ -1,7 +1,7 @@
-package com.fhit.test.microrocketmq.producer;
+package com.fhit.test.micromapreduce.producer;
 
 
-import com.fhit.test.microrocketmq.CONST;
+import com.fhit.test.micromapreduce.CONST;
 import org.apache.rocketmq.client.exception.MQBrokerException;
 import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
@@ -13,7 +13,7 @@ import org.apache.rocketmq.remoting.exception.RemotingException;
  * @author wty
  * @create 2020-03-24 18:29
  */
-public class RocketMqProducer_cluster {
+public class RocketMqProducer {
     public static void main(String[] args) {
         //创建生产者
         DefaultMQProducer producer = new DefaultMQProducer("myProducer");
