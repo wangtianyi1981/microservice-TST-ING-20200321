@@ -2,7 +2,7 @@ package com.fhit.test.microcommon.entity;
 
 /**
  * @author wty
- * @create 2020-03-14 9:52
+ * @create 2020-04-14 9:52
  */
 public class Message {
     /**

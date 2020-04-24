@@ -9,7 +9,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 
 /**
  * @author wty
- * @create 2020-03-14 17:48
+ * @create 2020-04-14 17:48
  */
 @Configuration
 public class Appconfig {

@@ -14,7 +14,7 @@ import java.util.concurrent.ExecutionException;
 
 /**
  * @author wty
- * @create 2020-03-24 18:29
+ * @create 2020-04-24 18:29
  */
 public class KfkProducer {
     static String topic = "topictest";

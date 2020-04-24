@@ -11,6 +11,7 @@
     <file url="file://$PROJECT_DIR$/micro-person2" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/micro-redis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/micro-rocketmq" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/micro-spark" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

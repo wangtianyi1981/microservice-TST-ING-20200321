@@ -16,14 +16,9 @@
         <module name="micro-rocketmq" />
         <module name="micro-kafka" />
         <module name="micro-person2" />
+        <module name="micro-spark" />
         <module name="micro-mapreduce" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="micro_city4" target="1.5" />
-      <module name="micro_common" target="1.5" />
-      <module name="micro_person" target="1.5" />
-      <module name="micro_person2" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>

@@ -11,7 +11,7 @@ import org.apache.rocketmq.remoting.exception.RemotingException;
 
 /**
  * @author wty
- * @create 2020-03-24 18:29
+ * @create 2020-04-24 18:29
  */
 public class RocketMqProducer {
     public static void main(String[] args) {

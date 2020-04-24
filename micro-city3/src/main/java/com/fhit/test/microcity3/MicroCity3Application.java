@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 /**
  * @author wty
- * @create 2020-03-14 10:18
+ * @create 2020-04-14 10:18
  */
 @CrossOrigin
 @ImportResource(locations = {"classpath:applicationContext.xml"})

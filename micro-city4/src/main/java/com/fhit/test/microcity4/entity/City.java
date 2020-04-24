@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * @author wty
- * @create 2020-03-14 10:22
+ * @create 2020-04-14 10:22
  */
 public class City implements Serializable {
     private Integer id;

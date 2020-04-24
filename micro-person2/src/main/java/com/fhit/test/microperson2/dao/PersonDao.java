@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * @author wty
- * @create 2020-03-18 21:19
+ * @create 2020-04-18 21:19
  * jpa使用方式一：继承JpaRepository<Person,String>,JpaSpecificationExecutor<Person>，无需写其它代码
  * JpaRepository：提供了基本的增删改查
  * JpaRepository：提供了较为复杂的条件查询

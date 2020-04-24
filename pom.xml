@@ -21,6 +21,7 @@
         <module>micro-kafka</module>
         <module>micro-rocketmq</module>
         <module>micro-mapreduce</module>
+        <module>micro-spark</module>
     </modules>
 
     <properties>
